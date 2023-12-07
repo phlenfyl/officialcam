@@ -14,24 +14,40 @@ CSRF_COOKIE_DOMAIN = 'https://mfmyaounde-bmig8es3.b4a.run'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DB_ENGINE'),
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'camdb',
+        'USER': 'postgres',
+        'PASSWORD': 'MEShe19682002.',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': os.getenv('DB_ENGINE'),
+#         'NAME': os.getenv('DB_NAME'),
+#         'USER': os.getenv('DB_USER'),
+#         'PASSWORD': os.getenv('DB_PASSWORD'),
+#         'HOST': os.getenv('DB_HOST'),
+#         'PORT': os.getenv('DB_PORT'),
+#     }
+# }
 
 
 ###################################
     ##  CLOUDINARY IMAGE AND VIDEO UPLOAD SETTINGS ##
 #################################### 
 cloudinary.config( 
-  cloud_name = os.getenv('CLOUDINARY_NAME'), 
-  api_key =  os.getenv('API_KEY'), 
-  api_secret =  os.getenv('API_SECRET'),
-  secure =  os.getenv('SECURE')
+  cloud_name = 'ddqibt7em', 
+  api_key =  '185718447627493', 
+  api_secret =  'QIYTfSXOefCl72rixkvBgEzJiDs',
+  secure =  True
 )
+# cloudinary.config( 
+#   cloud_name = os.getenv('CLOUDINARY_NAME'), 
+#   api_key =  os.getenv('API_KEY'), 
+#   api_secret =  os.getenv('API_SECRET'),
+#   secure =  os.getenv('SECURE')
+# )
 
 
