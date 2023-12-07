@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load static %}
+
+<div class="banner-container">
+    <img
+        alt='banner image'
+        src="{% static '' %}img/banner.png"
+        quality={100}
+        class="banner-img"  
+    />
+    <div class="banner-texts">
+        <h1 class="banner-title" data-aos="fade-down-right" data-aos-duration="2000">
+           {% trans "SURELY THE LORD IS HERE" %}
+        </h1>
+        <small class="banner-desc" data-aos="zoom-in-up" data-aos-duration="2500">
+            {% trans " MFM Ministries is a full gospel ministry" %} {% trans "devoted <br /> to the Revival of" %} 
+            {% trans "Apostolic Signs, Holy Ghost <br />" %} {% trans "fireworks and the unlimited demonstration" %} 
+            {% trans "of the <br /> power of God" %} {% trans "to deliver to the uttermost. " %}
+        </small>
+        <br />
+        <div class="banner-but">
+        <a href="{% url 'main:mfmcam' %}" class="banner-butlike">{% trans "About Us" %}</a>
+        <a href="{% url 'sermon:sermon' %}" class="banner-sermons">{% trans "Sermon" %}</a>
+        </div>
+    </div>
+</div>

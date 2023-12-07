@@ -1,0 +1,104 @@
+{% extends "_base.html" %}
+
+
+
+{% load i18n %}
+{% load static %}
+
+<!-- title section -->
+{% block title %} | Sermon{% endblock title %}
+
+
+<!-- upper header section -->
+{% block header %}
+  {% include "components/navbar.html" %}
+{% endblock header %}
+
+<!--content -->
+{% block content %}
+<div class="sermon-mainContainer">
+    <div class="sermon-container">
+        <div class="sermon-banner">
+            <div class="sermon-bannerHeader">
+            <h2 class="sermon-title">{% trans "Listen to our <br /> Messages" %}</h2>
+            <small class="sermon-desc">{% trans "Listen and Download Messages" %}</small>
+            </div>
+            <img alt='banner image'
+            src="{% static '' %}img/go.png"
+            quality="100"
+            fill="false"
+            class="sermon-img"
+            />
+        </div>
+        <div class="sermon-cards ">
+            {% for item in object_list %}
+                <div class="sermon-grids" data-aos="zoom-out-left" data-aos-duration="2000">
+                    <audio id="audio" controls class="landing-audio">
+                        <source src={{item.audio.url}} id="audiosource" type="audio/mpeg" />
+                        {% trans "Your browser does not support the audio element" %}
+                    </audio>
+                    <div id="img" class="sermon-imgContainer relative">
+                        <a style="cursor: pointer;" class="aTriggers z-10 text-3xl w-3/4 absolute left-[3em] top-[2.5em] md:left-[3em] md:top-[3em] lg:left-[3.2em] lg:top-[3em] text-[#7D1A54]" id="aTrigger" data-active="" data-audio="{{ item.audio.url }}">
+                            <i class="fa fa-play"></i>
+                        </a> 
+                        {% if item.img is None %}
+                            <img  fill src={{item.image.url}} alt={{item.title}} sizes="(min-width: 808px) 50vw, 100vw" class="sermon-image" />
+                        {% else %}
+                            <img  fill src={{item.img.url}} alt={{item.title}} sizes="(min-width: 808px) 50vw, 100vw" class="sermon-image" />
+                        {% endif %}
+                    </div>
+                    <div class="sermon-cardTexts">
+                        <small class="sermon-author">{{item.author.name}}</small>
+                        <p class="sermon-book">{{item.title}}</p>
+                        <a href="{% url 'sermon:download' item.id %}" class="sermon-link" download="{{item.audio.name}}">{% trans "Download" %}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div> 
+        <div class="flex items-center justify-between lg:justify-evenly mb-20 mt-[2em] lg:mt-20 mx-1 md:mx-20">
+            <!-- Previous Button -->
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-[#7D1A54] border border-white rounded-lg">
+                    <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                    </svg>
+                    Previous
+                </a>
+            {% else %}
+                <a aria-disabled="true" class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-[#7D1A54] border border-white rounded-lg">
+                    <svg class="w-3.5 h-3.5 me-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                    </svg>
+                    Previous
+                </a>
+            {% endif %}
+
+            <!-- Next Button -->
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-white bg-[#7D1A54] border border-white rounded-lg">
+                    Next
+                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            {% else %}
+                <a aria-disabled="true" class="flex items-center justify-center px-3 h-8 ms-3 text-sm font-medium text-white bg-[#7D1A54] border border-white rounded-lg">
+                    Next
+                    <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+
+
+<!-- footer content -->
+{% block footer %}
+  {% include "components/footer.html" %}
+{% endblock footer %}

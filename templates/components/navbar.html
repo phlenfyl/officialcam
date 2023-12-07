@@ -1,0 +1,33 @@
+{% load i18n %}
+{% load static %}
+
+<main class="navbar-mainContainer">
+    <div class="navbar-logo">
+        <img src="{% static '' %}img/mfm.png" alt='mfm logo' class="navbar-img" />
+        <small class="navbar-cam">
+        Mega Regional HQ., <br />
+        Omnisport Yaoundé, <br />
+        Cameroon
+        </small>
+    </div>
+    <label id='icon' class="navbar-icon">
+        <img src='/icon.png' alt='mfm icon' width="20" height="30" class="navbar-burger" />
+    </label>
+    <div class="navbar-color"></div>
+    <div class="navbar-nav">
+        <a href="{% url 'main:index' %}" class="navbar-links">Home</a>
+        <a href="{% url 'main:mfmcam' %}" class="navbar-links">{% trans "MFM Cameroon" %}</a>
+        <a href="{% url 'sermon:sermon' %}" class="navbar-links">{% trans "Sermon" %}</a>
+        {% comment %} <a href="#" class="navbar-links">{% trans "Bookshop" %}</a> {% endcomment %}
+        <a href="{% url 'program:program' %}" class="navbar-links">{% trans "Programs" %}</a>
+        {% include "lang_base.html" %}
+        <a href="{% url 'main:contact' %}" class="navbar-contact">{% trans "Contact Us" %}</a>
+    </div>
+    <a href="{% url 'main:contact' %}" class="navbar-smallContact">{% trans "Contact Us" %}</a>
+</main>
+
+
+{% comment %} django-admin makemessages --all --ignore=environ 
+django-admin compilemessages --ignore=environ
+npx tailwindcss -i ./main/static/src/input.css -o ./main/static/src/output.css --watch
+{% endcomment %}

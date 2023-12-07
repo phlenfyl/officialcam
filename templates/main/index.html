@@ -1,0 +1,141 @@
+{% extends "_base.html" %}
+
+
+{% load i18n %} 
+{% load static %}
+
+<!-- title section -->
+{% block title %} | {% translate "Home" %} {% endblock title %}
+
+
+<!-- upper header section -->
+{% block header %}
+  {% include "components/navbar.html" %}
+{% endblock header %}
+
+
+<!-- banner section -->
+{% block banner %}
+  {% include "components/banner.html" %}
+{% endblock banner %}
+
+<!--content -->
+{% block content %}
+
+{% comment %} ######################### ABOUT US AREA ####################### {% endcomment %}
+<div class="landing-about">
+    <div class="landing-aboutsub">
+        <h2 class="landing-abttitle">{% trans "Who we are?" %}</h2>
+        <p class="landing-abtdesc">
+            {% trans "MFM Ministries is a full gospel ministry <br />" %}
+            {% trans "devoted to the Revival of Apostolic Signs,<br />" %} 
+            {% trans "Holy Ghost fireworks and the unlimited <br />" %}
+            {% trans "demonstration of the power of God to <br />" %}
+            {% trans "deliver to the uttermost." %}
+        </p>
+        <a href="{% url 'main:mfmcam' %}" class="landing-like">{% trans "Read More" %}</a>
+    </div>
+</div>
+
+{% comment %} ######################## PROGRAMS AREA ########################### {% endcomment %}
+<div class="landing-mainSlider">
+    <h2 class="landing-title text-center" data-aos="fade-up"
+     data-aos-duration="3000">{% trans "Join us for our special programs" %}</h2>
+    <div class="landing-slider" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+        <div class="owl-carousel owl-theme" id="landing-items">
+            {% for item in program %}
+                <div class="item">
+                    {% if item.Image is None %}
+                        <a href="{% url 'program:program' %}">
+                            <img class="slider-img" src="{{item.img.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                        </a>
+                    {% else %}
+                        <a href="{% url 'program:program' %}">
+                            <img class="slider-img" src="{{item.Image.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                        </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <a href="{% url 'program:program' %}" class="landing-butlike">{% trans "More Programs" %}</a>
+    </div>
+</div>
+
+{% comment %} ####################### SERMONS AREA ############################ {% endcomment %}
+<div class="landing-sermon">
+    <h2 class="landing-title" data-aos="fade-down"
+        data-aos-easing="linear"
+     data-aos-duration="1500">{% trans "Listen to our Messages" %}</h2>
+    <small class="landing-desc">{% trans "Listen and Download Messages" %}</small>
+    <div class="landing-cards">
+        {% for item in sermon %}
+            <div class="landing-grids" data-aos="zoom-in-right" data-aos-duration="2000">
+                <audio id="audio" controls class="landing-audio">
+                    <source src={{item.audio.url}} id="audiosource" type="audio/mpeg" />
+                    {% trans "Your browser does not support the audio element" %}
+                </audio>
+                <div id="img" class="landing-imgContainer relative">
+                    <a style="cursor: pointer;" 
+                        class="aTriggers lg:text-4xl text-2xl w-3/4 absolute left-4 top-20 md:left-1 md:top-16 lg:left-[0.89em] lg:top-[2.39em] text-[#7D1A54]" id="aTrigger" data-active="" data-audio="{{ item.audio.url }}">
+                        <i class="fa fa-play"></i>
+                    </a> 
+                    {% if item.img is None %}
+                        <img alt={{item.title}} src={{item.Image.url}} quality={100} sizes="(min-width: 808px) 50vw, 100vw" fill class="landing-img"/>
+                    {% else %}
+                        <img alt={{item.title}} src={{item.img.url}} quality={100} sizes="(min-width: 808px) 50vw, 100vw" fill class="landing-img"/>
+                    {% endif %}
+                </div>
+                <div id="music" class="landing-cardTexts">
+                    <small class="landing-author">{{item.author.name}}</small>
+                    <p class="landing-book">{{item.title}}</p>
+                    <a href="{% url 'sermon:download' item.id %}" class="landing-link mb-20" download="{{item.audio.name}}">{% trans "Download" %}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'sermon:sermon' %}" class="landing-butlike">{% trans "More Sermons" %} </a>
+</div>
+
+{% comment %} ####################### BOOKSTORES AREA ############################ {% endcomment %}
+{% comment %} <Bookstore /> {% endcomment %}
+
+{% comment %} ####################### CONTACT AREA ############################ {% endcomment %}
+<div class="landing-program">
+    <h2 class="landing-title">{% trans "Join us for our Mid-Week Programs" %}</h2>
+    <div class="landing-content">
+        {% for item in week %}
+            <div class="landing-grids" data-aos="zoom-in" data-aos-duration="2000">
+                {% if item.img is None %}
+                    <div class="landing-imgContainer">
+                        <img alt={{item.name}} src="{{item.image.url}}" quality={100} sizes="(min-width: 808px) 50vw, 100vw" fill class="landing-img"/>
+                    </div>
+                {% else %}
+                    <div class="landing-imgContainer">
+                        <img alt={{item.name}} src="{{item.img.url}}" quality={100} sizes="(min-width: 808px) 50vw, 100vw" fill class="landing-img"/>
+                    </div>
+                {% endif %}
+                <div class="landing-cardTexts">
+                    <div class="landing-mainTitle">
+                        <span class="landing-author">{{item.name}}</span>
+                        <small class="landing-book">{{item.time}}</small>
+                    </div>
+                    <a href="{% url 'program:program' %}" class="landing-link">{% trans "Read More" %}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'program:program' %}" class="landing-butlike">{% trans "View All" %}</a>
+</div>
+
+{% endblock content %}
+
+
+
+
+<!-- footer content -->
+{% block footer %}
+  {% include "components/footer.html" %}
+{% endblock footer %}

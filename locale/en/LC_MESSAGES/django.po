@@ -1,0 +1,490 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-07 12:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\core\settings\local.py:130
+msgid "English"
+msgstr "English"
+
+#: .\core\settings\local.py:131
+msgid "French"
+msgstr "French"
+
+#: .\main\models.py:12
+#, fuzzy
+#| msgid "About Us"
+msgid "about"
+msgstr "About Us"
+
+#: .\main\models.py:18
+msgid "Mfm"
+msgstr "Mfm"
+
+#: .\main\models.py:21 .\sermon\models.py:14
+msgid "name"
+msgstr "name"
+
+#: .\main\models.py:22 .\program\models.py:17 .\sermon\models.py:15
+#: .\sermon\models.py:36
+msgid "slug"
+msgstr "slug"
+
+#: .\main\models.py:23 .\program\models.py:19 .\sermon\models.py:37
+msgid "img"
+msgstr "img"
+
+#: .\main\models.py:26
+#, fuzzy
+#| msgid "image"
+msgid "Image"
+msgstr "image"
+
+#: .\main\models.py:27
+msgid "time"
+msgstr "time"
+
+#: .\main\models.py:28
+msgid "To be displayed at program page"
+msgstr "To be displayed at program page"
+
+#: .\main\models.py:29 .\main\models.py:55 .\program\models.py:36
+#: .\program\models.py:59 .\sermon\models.py:17 .\sermon\models.py:47
+msgid "created"
+msgstr "created"
+
+#: .\main\models.py:30 .\main\models.py:56 .\program\models.py:37
+#: .\program\models.py:60 .\sermon\models.py:18 .\sermon\models.py:48
+msgid "updated"
+msgstr "updated"
+
+#: .\main\models.py:32 .\program\models.py:40 .\sermon\models.py:50
+msgid "tags"
+msgstr "tags"
+
+#: .\main\models.py:46
+msgid "Week Service"
+msgstr "Week Service"
+
+#: .\main\models.py:50
+msgid "fullame"
+msgstr "fullame"
+
+#: .\main\models.py:51
+#, fuzzy
+#| msgid "Phone Number"
+msgid "number"
+msgstr "Phone Number"
+
+#: .\main\models.py:52
+msgid "email"
+msgstr "email"
+
+#: .\main\models.py:53
+#, fuzzy
+#| msgid "Messages"
+msgid "message"
+msgstr "Messages"
+
+#: .\main\models.py:62 .\templates\components\footer.html:25
+#: .\templates\pages\contact.html:9
+msgid "Contact"
+msgstr "Contact"
+
+#: .\program\address.py:6 .\sermon\address.py:6
+msgid "ip address"
+msgstr "ip address"
+
+#: .\program\models.py:16 .\sermon\models.py:35
+msgid "title"
+msgstr "title"
+
+#: .\program\models.py:18
+msgid "desc"
+msgstr "desc"
+
+#: .\program\models.py:22 .\sermon\models.py:40
+msgid "image"
+msgstr "image"
+
+#: .\program\models.py:23
+msgid "video"
+msgstr "video"
+
+#: .\program\models.py:27 .\sermon\models.py:45
+msgid "like_count"
+msgstr "like_count"
+
+#: .\program\models.py:29
+msgid "specialprogram"
+msgstr "specialprogram"
+
+#: .\program\models.py:30
+msgid "deliverance"
+msgstr "deliverance"
+
+#: .\program\models.py:31
+msgid "counseling"
+msgstr "counseling"
+
+#: .\program\models.py:33
+msgid "display"
+msgstr "display"
+
+#: .\program\models.py:35
+msgid "date"
+msgstr "date"
+
+#: .\program\models.py:54
+msgid "Program"
+msgstr "Program"
+
+#: .\program\models.py:66
+msgid "ProgramNum"
+msgstr "ProgramNum"
+
+#: .\sermon\models.py:30
+msgid "Author"
+msgstr "Author"
+
+#: .\sermon\models.py:41
+msgid "audio"
+msgstr "audio"
+
+#: .\sermon\models.py:64 .\templates\components\banner.html:23
+#: .\templates\components\navbar.html:20
+msgid "Sermon"
+msgstr "Sermon"
+
+#: .\templates\components\banner.html:13
+msgid "SURELY THE LORD IS HERE"
+msgstr "SURELY THE LORD IS HERE"
+
+#: .\templates\components\banner.html:16
+#, fuzzy
+#| msgid " MFM Ministries is a full gospel ministry devoted <br />"
+msgid " MFM Ministries is a full gospel ministry"
+msgstr " MFM Ministries is a full gospel ministry devoted <br />"
+
+#: .\templates\components\banner.html:16
+#, fuzzy
+#| msgid "To promote the revival of Apostolic signs, wonders and miracles"
+msgid "devoted <br /> to the Revival of"
+msgstr "To promote the revival of Apostolic signs, wonders and miracles"
+
+#: .\templates\components\banner.html:17
+#, fuzzy
+#| msgid "Signs, Holy Ghost <br /> fireworks and"
+msgid "Apostolic Signs, Holy Ghost <br />"
+msgstr "Signs, Holy Ghost <br /> fireworks and"
+
+#: .\templates\components\banner.html:17
+#, fuzzy
+#| msgid "Holy Ghost fireworks and the unlimited <br />"
+msgid "fireworks and the unlimited demonstration"
+msgstr "Holy Ghost fireworks and the unlimited <br />"
+
+#: .\templates\components\banner.html:18
+msgid "of the <br /> power of God"
+msgstr "of the <br /> power of God"
+
+#: .\templates\components\banner.html:18
+#, fuzzy
+#| msgid "deliver to the uttermost."
+msgid "to deliver to the uttermost. "
+msgstr "deliver to the uttermost."
+
+#: .\templates\components\banner.html:22 .\templates\components\footer.html:15
+#: .\templates\pages\mfmcam.html:23
+msgid "About Us"
+msgstr "About Us"
+
+#: .\templates\components\footer.html:14 .\templates\components\navbar.html:19
+#: .\templates\pages\mfmcam.html:9
+msgid "MFM Cameroon"
+msgstr "MFM Cameroon"
+
+#: .\templates\components\footer.html:16 .\templates\components\navbar.html:25
+#: .\templates\components\navbar.html:27 .\templates\pages\contact.html:23
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: .\templates\components\footer.html:17
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: .\templates\components\footer.html:20
+msgid "Messages"
+msgstr "Messages"
+
+#: .\templates\components\footer.html:21
+msgid "Available Books"
+msgstr "Available Books"
+
+#: .\templates\components\footer.html:22
+msgid "Our Program"
+msgstr "Our Program"
+
+#: .\templates\components\navbar.html:23 .\templates\pages\program.html:9
+msgid "Programs"
+msgstr "Programs"
+
+#: .\templates\main\index.html:8
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\main\index.html:29
+msgid "Who we are?"
+msgstr "Who we are?"
+
+#: .\templates\main\index.html:31
+#, fuzzy
+#| msgid " MFM Ministries is a full gospel ministry devoted <br />"
+msgid "MFM Ministries is a full gospel ministry <br />"
+msgstr " MFM Ministries is a full gospel ministry devoted <br />"
+
+#: .\templates\main\index.html:32
+#, fuzzy
+#| msgid "To promote the revival of Apostolic signs, wonders and miracles"
+msgid "devoted to the Revival of Apostolic Signs,<br />"
+msgstr "To promote the revival of Apostolic signs, wonders and miracles"
+
+#: .\templates\main\index.html:33
+msgid "Holy Ghost fireworks and the unlimited <br />"
+msgstr "Holy Ghost fireworks and the unlimited <br />"
+
+#: .\templates\main\index.html:34
+msgid "demonstration of the power of God to <br />"
+msgstr "demonstration of the power of God to <br />"
+
+#: .\templates\main\index.html:35
+msgid "deliver to the uttermost."
+msgstr "deliver to the uttermost."
+
+#: .\templates\main\index.html:37 .\templates\main\index.html:131
+msgid "Read More"
+msgstr "Read More"
+
+#: .\templates\main\index.html:45
+#, fuzzy
+#| msgid "Join us for our <br /> special programs"
+msgid "Join us for our special programs"
+msgstr "Join us for our <br /> special programs"
+
+#: .\templates\main\index.html:64
+msgid "More Programs"
+msgstr "More Programs"
+
+#: .\templates\main\index.html:73
+#, fuzzy
+#| msgid "Listen to our <br /> Messages"
+msgid "Listen to our Messages"
+msgstr "Listen to our <br /> Messages"
+
+#: .\templates\main\index.html:74 .\templates\pages\sermon.html:24
+msgid "Listen and Download Messages"
+msgstr "Listen and Download Messages"
+
+#: .\templates\main\index.html:80 .\templates\pages\sermon.html:38
+msgid "Your browser does not support the audio element"
+msgstr "Your browser does not support the audio element"
+
+#: .\templates\main\index.html:96 .\templates\pages\sermon.html:53
+msgid "Download"
+msgstr "Download"
+
+#: .\templates\main\index.html:102
+msgid "More Sermons"
+msgstr "More Sermons"
+
+#: .\templates\main\index.html:113
+#, fuzzy
+#| msgid "Join us for our <br /> Mid-Week Programs"
+msgid "Join us for our Mid-Week Programs"
+msgstr "Join us for our <br /> Mid-Week Programs"
+
+#: .\templates\main\index.html:136
+msgid "View All"
+msgstr "View All"
+
+#: .\templates\pages\contact.html:24
+msgid "Get in touch and let's know how we can help"
+msgstr "Get in touch and let's know how we can help"
+
+#: .\templates\pages\contact.html:34
+#, fuzzy
+#| msgid "Need Help? <br /> Messages Us<"
+msgid "Need Help? <br /> Messages Us"
+msgstr "Need Help? <br /> Messages Us"
+
+#: .\templates\pages\contact.html:35
+msgid ""
+"Have a need or enquiry? <br /> Reach out to us Here <br /> by filling the "
+"form below"
+msgstr ""
+"Have a need or enquiry? <br /> Reach out to us Here <br /> by filling the "
+"form below"
+
+#: .\templates\pages\contact.html:39
+msgid "Full Name"
+msgstr "Full Name"
+
+#: .\templates\pages\contact.html:43
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: .\templates\pages\contact.html:47
+msgid "Email Address"
+msgstr "Email Address"
+
+#: .\templates\pages\contact.html:52
+#, fuzzy
+#| msgid "Messages"
+msgid "Your Message"
+msgstr "Messages"
+
+#: .\templates\pages\contact.html:56
+#, fuzzy
+#| msgid "Messages"
+msgid "Send Message"
+msgstr "Send Messages"
+
+#: .\templates\pages\mfmcam.html:24
+#, fuzzy
+#| msgid "Our Mission and Vision"
+msgid "Our Mission and our Vision"
+msgstr "Our Mission and Vision"
+
+#: .\templates\pages\mfmcam.html:34
+msgid "Our Mission and Vision"
+msgstr "Our Mission and Vision"
+
+#: .\templates\pages\program.html:23
+#, fuzzy
+#| msgid "Join us for our <br /> special programs"
+msgid "Join us for <br /> special programs"
+msgstr "Join us for our <br /> special programs"
+
+#: .\templates\pages\program.html:24
+#, fuzzy
+#| msgid "Listen to our <br /> Messages"
+msgid "Listen to our programs"
+msgstr "Listen to our <br /> Messages"
+
+#: .\templates\pages\program.html:35
+#, fuzzy
+#| msgid "Week Service"
+msgid "Weekly Services"
+msgstr "Week Service"
+
+#: .\templates\pages\program.html:59
+#, fuzzy
+#| msgid "counseling"
+msgid "Counseling Services"
+msgstr "counseling"
+
+#: .\templates\pages\program.html:83
+#, fuzzy
+#| msgid "More Programs"
+msgid "Deliverance Programs"
+msgstr "More Programs"
+
+#: .\templates\pages\program.html:107
+#, fuzzy
+#| msgid "specialprogram"
+msgid "Special Programs"
+msgstr "specialprogram"
+
+#: .\templates\pages\sermon.html:23
+msgid "Listen to our <br /> Messages"
+msgstr "Listen to our <br /> Messages"
+
+#~ msgid "Bookshop"
+#~ msgstr "Bookshop"
+
+#~ msgid "power of God to deliver to the uttermost. "
+#~ msgstr "power of God to deliver to the uttermost. "
+
+#~ msgid "To promote the revival of Apostolic signs, wonders and miracles"
+#~ msgstr "To promote the revival of Apostolic signs, wonders and miracles"
+
+#~ msgid "To bring together children of God who are lost in dead churches"
+#~ msgstr "To bring together children of God who are lost in dead churches"
+
+#~ msgid "To train believers in the art and science of spiritual warfare;"
+#~ msgstr "To train believers in the art and science of spiritual warfare;"
+
+#~ msgid "thus making them an aggressive and victorious army for the Lord"
+#~ msgstr "thus making them an aggressive and victorious army for the Lord"
+
+#~ msgid "To train believers to receive Holy Ghost baptism and fire as well"
+#~ msgstr "To train believers to receive Holy Ghost baptism and fire as well"
+
+#~ msgid "as a daily walk and relationship with the Holy Spirit"
+#~ msgstr "as a daily walk and relationship with the Holy Spirit"
+
+#~ msgid "To turn the joy of our enemies to sorrow. That is"
+#~ msgstr "To turn the joy of our enemies to sorrow. That is"
+
+#~ msgid "wherever we are. If you do not believe in"
+#~ msgstr "wherever we are. If you do not believe in"
+
+#~ msgid "deliverance, you are not supposed to be in MFM"
+#~ msgstr "deliverance, you are not supposed to be in MFM"
+
+#, fuzzy
+#~| msgid "thus making them an aggressive and victorious army for the Lord"
+#~ msgid "To build an aggressive end-time army for the Lord."
+#~ msgstr "thus making them an aggressive and victorious army for the Lord"
+
+#, fuzzy
+#~| msgid "thus making them an aggressive and victorious army for the Lord"
+#~ msgid "aggressive end-time army for the Lord What"
+#~ msgstr "thus making them an aggressive and victorious army for the Lord"
+
+#~ msgid "a church where a sinner enters with two options:"
+#~ msgstr "a church where a sinner enters with two options:"
+
+#~ msgid "he either repents or does not come back,"
+#~ msgstr "he either repents or does not come back,"
+
+#~ msgid "contrary to the present day church where"
+#~ msgstr "contrary to the present day church where"
+
+#~ msgid "sinners are comfortable and find things so easy and convenient"
+#~ msgstr "sinners are comfortable and find things so easy and convenient"
+
+#~ msgid ""
+#~ "To deliver those who have become slaves to pastors, prophets and apostles"
+#~ msgstr ""
+#~ "To deliver those who have become slaves to pastors, prophets and apostles"
+
+#~ msgid "To build up heavenly-bound and aggressive Christians."
+#~ msgstr "To build up heavenly-bound and aggressive Christians."
+
+#~ msgid "make heaven. It is not a worldly Church"
+#~ msgstr "make heaven. It is not a worldly Church"
+
+#~ msgid "To build up prayer eagles"
+#~ msgstr "To build up prayer eagles"
+
+#~ msgid "To purify the Pentecostal dirtiness of this age"
+#~ msgstr "To purify the Pentecostal dirtiness of this age"
+
+#~ msgid "like"
+#~ msgstr "like"

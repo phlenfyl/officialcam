@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load compress %}
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFM Yaounde{% block title %} {% endblock title %}</title>
+
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+</head>
+
+<body>
+    {% csrf_token %}
+    <!-- upper header section -->
+    {% block header %}
+      
+    {% endblock header %}
+
+    <main class="mainContainer">
+        <!-- banner section -->
+        {% block banner %}
+        
+        {% endblock banner %}
+
+        <!-- first content -->
+        {% block content %}
+        
+        {% endblock content %}
+    
+    </main>
+    <!-- footer section -->    
+    {% block footer %}
+      
+    {% endblock footer %}
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <script src="{% static '' %}js/audio.js"></script>
+    <!-- --------------- for parallax type styling ---------------- -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                margin: 30,
+                responsiveClass: true,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                items: 2,
+                fluidSpeed: 200,
+                smartSpeed: 1000,
+                responsive: {0: {items: 1,},400: {items: 2,},600: {items: 2,}, }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

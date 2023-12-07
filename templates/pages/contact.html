@@ -1,0 +1,70 @@
+{% extends "_base.html" %}
+
+
+
+{% load i18n %}
+{% load static %}
+
+<!-- title section -->
+{% block title %} | {% trans "Contact" %}{% endblock title %}
+
+
+<!-- upper header section -->
+{% block header %}
+  {% include "components/navbar.html" %}
+{% endblock header %}
+
+<!--content -->
+{% block content %}
+    <div class="contact-mainContainer">
+        <div class="contact-container">
+            <div class="contact-banner">
+                <div class="contact-bannerHeader">
+                    <h2 class="contact-title">{% trans "Contact Us" %}</h2>
+                    <small class="contact-desc">{% trans "Get in touch and let's know how we can help" %}</small>
+                </div>
+                <img alt='banner image'
+                src="{% static '' %}img/phone.png"
+                quality={100}
+                fill={false}
+                class="contact-img"
+                />
+            </div>
+            <div class="contact-mainContent">
+                <h2 class="contact-title">{% trans "Need Help? <br /> Messages Us" %}</h2>
+                <small class="contact-desc">{% trans "Have a need or enquiry? <br /> Reach out to us Here <br /> by filling the form below" %}</small>
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <div>
+                            <label htmlFor="">{% trans "Full Name" %}</label>
+                            <input class="text-[#1b1a1a] bg-transparent border p-5.5 outline-0 text-sm/[15px] font-normal" type="text" placeholder='first name                   last name' class="contact-input" />
+                        </div>
+                        <div>
+                            <label htmlFor="">{% trans "Phone Number" %}</label>
+                            <input class="text-[#1b1a1a] bg-transparent border p-5.5 outline-0 text-sm/[15px] font-normal" type="text" placeholder='enter your phone number' class="contact-input" />
+                        </div>
+                        <div>
+                            <label htmlFor="">{% trans "Email Address" %}</label>
+                            <input class="text-[#1b1a1a] bg-transparent border p-5.5 outline-0 text-sm/[15px] font-normal" type="text" placeholder='example@gmail..' class="contact-input" />
+                
+                        </div>
+                        <div>
+                            <label htmlFor="">{% trans "Your Message" %}</label>
+                            <textarea class="contact-textArea text-[#1b1a1a] bg-transparent border p-5.5 outline-0 text-sm/[15px] font-normal" cols="30" rows="10" placeholder='message'></textarea>
+                        </div>
+
+                        <a href="/" class="contact-butlike"> {% trans "Send Message" %} </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+
+
+
+<!-- footer content -->
+{% block footer %}
+  {% include "components/footer.html" %}
+{% endblock footer %}

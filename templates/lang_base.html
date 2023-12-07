@@ -1,0 +1,24 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as languages %}
+<a id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-grey lg:text-[#413F3F] bg-transparent hover:text-white lg:hover:text-[#7D1A54] font-medium -mt-1 md:mt-0 text-xs md:text-sm py-2.5 text-center inline-flex items-center" role="button">
+    <i class="fa fa-language text-xl text-white lg:text-4xl lg:text-[#7D1A54]"></i> 
+    <svg class="w-2.5 h-2.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg>
+</a>
+<div id="dropdown" class="z-10 hidden bg-[#7D1A54] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#413F3F]">
+    <ul class="py-2 text-sm text-white hover:text-[#7D1A54] dark:text-[#7D1A54]" aria-labelledby="dropdownDefaultButton">
+        {% for lang_code, lang_name in languages %}
+            {% language lang_code %}
+                <li>
+                    <a href="/{{ lang_code }}/" class="block px-4 py-2 hover:bg-white hover:text-[#7D1A54]">{{ lang_name }}</a>
+                </li>
+            {% endlanguage %}
+        {% endfor %}
+    </ul>
+</div>
+
+
+{% comment %}data-dropdown-toggle
+ npx tailwindcss -i ./main/static/src/input.css -o ./main/static/src/output.css {% endcomment %}

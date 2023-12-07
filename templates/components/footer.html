@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load static %}
+
+<div class="footer-mainContainer">
+    <div class="footer-container">
+    <div class="footer-logo">
+        <img src="{% static '' %}img/mfm.png" alt='mfm logo' class="footer-img" />
+        <small class="footer-cam">Mega Regional <br />
+            headquarters, Omnisport <br />
+            Yaoundé Cameroon.
+        </small>
+    </div>
+    <div class="footer-link">
+        <a href="{% url 'main:mfmcam' %}" class="footer-links">{% trans "MFM Cameroon" %}</a>
+        <a href="{% url 'main:mfmcam' %}" class="footer-links">{% trans "About Us" %}</a>
+        <a href="{% url 'main:contact' %}" class="footer-links">{% trans "Contact Us" %}</a>
+        <a href="#" class="footer-links">{% trans "Privacy Policy" %}</a>
+    </div>
+    <div class="footer-link">
+        <a href="{% url 'sermon:sermon' %}" class="footer-links">{% trans "Messages" %}</a>
+        <a href="#" class="footer-links">{% trans "Available Books" %}</a>
+        <a href="{% url 'program:program' %}" class="footer-links">{% trans "Our Program" %}</a>
+    </div>
+    <div class="footer-link">
+        <a href="{% url 'main:contact' %}" class="footer-links">{% trans "Contact" %}</a>
+        <a href="#" class="footer-links">Mega Regional <br /> 
+            headquarters, Omnisport <br /> Yaoundé Cameroon.
+        </a>
+        <a href='tel: +237677293958' class="footer-links">Telephone; 
+            +237 677293958,              
+            +237697524514.
+        </a>
+    </div>
+    </div>
+</div>
+
+

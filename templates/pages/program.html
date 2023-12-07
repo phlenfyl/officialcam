@@ -1,0 +1,142 @@
+{% extends "_base.html" %}
+
+
+
+{% load i18n %}
+{% load static %}
+
+<!-- title section -->
+{% block title %} | {% trans "Programs" %}{% endblock title %}
+
+
+<!-- upper header section -->
+{% block header %}
+  {% include "components/navbar.html" %}
+{% endblock header %}
+
+<!--content -->
+{% block content %}
+<div class="program-mainContainer">
+    <div class="program-container">
+        <div class="program-banner">
+            <div class="program-bannerHeader">
+            <h2 class="program-title">{% trans "Join us for <br /> special programs" %}</h2>
+            <small class="program-desc">{% trans "Listen to our programs" %}</small>
+            </div>
+            <img alt='banner image'
+            src="{% static '' %}img/old.png"
+            quality="100"
+            fill="false"
+            class="program-img"
+            />
+        </div>
+        <div class="program-content">
+            <div class="program-slider">
+                <h1 class="text-2xl lg:text-4xl text-[#46013B] font-bold my-5"> {% trans "Weekly Services" %} </h1>
+                <div class="owl-carousel owl-theme">
+                    {% for item in weekly %}
+                        {% if item.display == True %}
+                            <div class="item max-w-2xl">
+                                {% if item.img is None %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.image.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% else %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.img.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% endif %}
+                                <div class="program-cardTexts">
+                                    <small class="program-author">{{item.name}}</small>
+                                    <p class="program-book mr-20">{{item.time}}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="program-slider slider2" id="slider2">
+                <h1 class="text-2xl lg:text-4xl text-[#46013B] font-bold my-5"> {% trans "Counseling Services" %} </h1>
+                <div class="owl-carousel owl-theme slider2" id="slider2">
+                    {% for item in program %}
+                        {% if item.counseling != False %}
+                            <div class="item max-w-2xl">
+                                {% if item.img is None %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.image.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% else %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.img.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% endif %}
+                                <div class="program-cardTexts">
+                                    <small class="program-author">{{item.title}}</small>
+                                    <p class="program-book mr-20">{{item.desc|safe}}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="program-slider">
+                <h1 class="text-2xl lg:text-4xl text-[#46013B] font-bold my-5"> {% trans "Deliverance Programs" %} </h1>
+                <div class="owl-carousel owl-theme">
+                    {% for item in program %}
+                        {% if item.deliverance == True %}
+                            <div class="item max-w-2xl">
+                                {% if item.img is None %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.image.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% else %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.img.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% endif %}
+                                <div class="program-cardTexts">
+                                    <small class="program-author">{{item.title}}</small>
+                                    <p class="program-book mr-20">{{item.desc|safe}}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>       
+            <div class="program-slider">
+                <h1 class="text-2xl lg:text-4xl text-[#46013B] font-bold my-5"> {% trans "Special Programs" %} </h1>
+                <div class="owl-carousel owl-theme">
+                    {% for item in program %}
+                        {% if item.speicalprogram == True %}
+                            <div class="item max-w-2xl">
+                                {% if item.img is None %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.image.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% else %}
+                                    <a href='#'>
+                                        <img class="" src="{{item.img.url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                    </a>
+                                {% endif %}
+                                <div class="program-cardTexts">
+                                    <small class="program-author">{{item.title}}</small>
+                                    <p class="program-book mr-20">{{item.desc|safe}}</p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>       
+        </div> 
+    </div>
+</div>
+
+{% endblock content %}
+
+
+
+
+<!-- footer content -->
+{% block footer %}
+  {% include "components/footer.html" %}
+{% endblock footer %}

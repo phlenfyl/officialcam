@@ -1,0 +1,50 @@
+{% extends "_base.html" %}
+
+
+
+{% load i18n %}
+{% load static %}
+
+<!-- title section -->
+{% block title %} | {% trans "MFM Cameroon" %}{% endblock title %}
+
+
+<!-- upper header section -->
+{% block header %}
+  {% include "components/navbar.html" %}
+{% endblock header %}
+
+<!--content -->
+{% block content %}
+<div class="mfmcam-mainContainer">
+    <div class="mfmcam-container">
+        <div class="mfmcam-banner">
+            <div class="mfmcam-bannerHeader">
+            <h2 class="mfmcam-title">{% trans "About Us" %}</h2>
+            <small class="mfmcam-desc">{% trans "Our Mission and our Vision" %}</small>
+            </div>
+            <img alt='banner image'
+            src="{% static '' %}img/logo.png"
+            quality="100"
+            fill="false"
+            class="mfmcam-img"
+            />
+        </div>
+        <div class="mfmcam-content">
+            <h2 class="mfmcam-title">{% trans "Our Mission and Vision" %}</h2>
+            <ul class="mfmcam-list">
+                <li>{{about.desc| safe}}</li>
+            </ul>
+        </div> 
+    </div>
+</div>
+
+{% endblock content %}
+
+
+
+
+<!-- footer content -->
+{% block footer %}
+  {% include "components/footer.html" %}
+{% endblock footer %}
