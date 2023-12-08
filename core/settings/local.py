@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-$ok6*buoc-06t2^p&3aff(ki84i-9(gji!73pwsf7!%44sjrfs
 
 
 # DEBUG = os.getenv('DEBUG')
-DEBUG = True
-
+DEBUG = False
+FORCE_SCRIPT_NAME = '/'
 # Application definition
 
 INSTALLED_APPS = [
