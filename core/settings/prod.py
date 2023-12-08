@@ -1,6 +1,6 @@
 from .local import *
 
-ALLOWED_HOSTS = ['.mfmyaounde-bmig8es3.b4a.run', 'mfmyaounde-bmig8es3.b4a.run']
+ALLOWED_HOSTS = ['*','.mfmyaounde-bmig8es3.b4a.run', 'mfmyaounde-bmig8es3.b4a.run']
 
 # Setup support for proxy headers
 USE_X_FORWARDED_HOST = True
@@ -14,12 +14,8 @@ CSRF_COOKIE_DOMAIN = 'https://mfmyaounde-bmig8es3.b4a.run'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'camdb',
-        'USER': 'postgres',
-        'PASSWORD': 'MEShe19682002.',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, '../db.sqlite3'),
     }
 }
 # DATABASES = {
