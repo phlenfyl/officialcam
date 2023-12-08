@@ -1,6 +1,6 @@
 from .local import *
 
-ALLOWED_HOSTS = ['*','.mfmyaounde-bmig8es3.b4a.run', 'mfmyaounde-bmig8es3.b4a.run']
+ALLOWED_HOSTS = ['*','.mfmyaounde1-lvlwlq9n.b4a.run', 'mfmyaounde1-lvlwlq9n.b4a.run']
 
 # Setup support for proxy headers
 USE_X_FORWARDED_HOST = True
@@ -8,8 +8,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 FORCE_SCRIPT_NAME = '/'
 # SECURE_SSL_REDIRECT = True
 
-CSRF_TRUSTED_ORIGINS = ['https://mfmyaounde-bmig8es3.b4a.run',]
-CSRF_COOKIE_DOMAIN = 'https://mfmyaounde-bmig8es3.b4a.run'
+CSRF_TRUSTED_ORIGINS = ['https://mfmyaounde1-lvlwlq9n.b4a.run',]
+CSRF_COOKIE_DOMAIN = 'https://mfmyaounde1-lvlwlq9n.b4a.run'
 
 
 DATABASES = {
